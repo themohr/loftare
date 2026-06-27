@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The stack behind Solaire Vail — Loftare Journal</title>
+  <meta name="description" content="Next.js, Stripe, Sanity, Resend — and why each one earned its place in the Solaire Vail booking platform.">
+  <link rel="canonical" href="https://loftare.studio/journal/the-stack-behind-solaire">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The stack behind Solaire Vail",
+    "author": { "@type": "Person", "name": "Dennis Mohr" },
+    "publisher": { "@type": "Organization", "name": "Loftare Studio", "url": "https://loftare.studio" },
+    "datePublished": "2025-10-22",
+    "description": "Next.js, Stripe, Sanity, Resend — and why each one earned its place."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="post-hero">
+  <div class="content-narrow">
+    <div class="post-hero-meta reveal">
+      <span class="post-tag">Dev UX</span>
+      <span class="post-date mono">October 22, 2025</span>
+      <span class="post-read-time mono">7 min read</span>
+    </div>
+    <h1 class="display display-md reveal" style="transition-delay:100ms">The stack behind Solaire Vail</h1>
+    <p class="reveal" style="transition-delay:200ms;font-size:18px;color:var(--muted);margin-top:20px;line-height:1.65">Next.js, Stripe, Sanity, Resend&mdash;and why each one earned its place.</p>
+  </div>
+</div>
+
+<section class="section-post-body">
+  <div class="section-inner">
+    <div class="post-body reveal">
+
+      <p>Every tool in a platform build should be there for a reason. Not because it was trending, not because it was already in the repo, but because it was the right answer to a specific question the project posed. Here is how the Solaire stack came together.</p>
+
+      <h2>Next.js — the frame</h2>
+
+      <p>The choice of Next.js was not controversial. Server components, edge rendering, and the App Router give us the performance characteristics an ultra-luxury platform requires: fast first paint, clean URLs, and the ability to render booking state server-side without exposing availability logic to the client.</p>
+
+      <p>The key requirement was that the availability calendar and booking flow needed to be server-rendered with real-time data from Sanity, with no client-side fetch flickering. Next.js server components handle this cleanly. The guest sees a complete, accurate calendar on first load, not a skeleton that hydrates with a second request.</p>
+
+      <h2>Sanity — the content layer</h2>
+
+      <p>Sanity is the only CMS that gives a non-technical owner a genuinely usable dashboard without requiring a custom admin build. The structured content model&mdash;availability documents, property configuration, seasonal pricing rules&mdash;is defined once and surfaced through Sanity Studio with field-level validation.</p>
+
+      <p>The owner updates availability by clicking dates on a calendar. Pricing adjustments happen in a form field. No code deploys. No FTP. No sending a spreadsheet to a developer.</p>
+
+      <p>Sanity&rsquo;s GROQ query language also happens to be excellent for the kind of date-range availability queries a booking engine needs. The query for &ldquo;all blocked date ranges that overlap with the guest&rsquo;s requested check-in and check-out&rdquo; is readable and fast.</p>
+
+      <h2>Stripe — payments</h2>
+
+      <p>Stripe was the only serious option for deposit handling. Payment Intents with <code>capture_method: manual</code> let us authorize the deposit at booking and capture it at check-in, which is the correct model for a luxury estate&mdash;the guest commits, the funds are secured, but the full capture happens when the stay begins.</p>
+
+      <p>Stripe Connect routes funds directly to the estate&rsquo;s bank account. There is no Loftare intermediary holding money. The estate receives its deposit directly, minus Stripe&rsquo;s processing fee, within two business days.</p>
+
+      <h2>Resend — transactional email</h2>
+
+      <p>The booking confirmation, pre-arrival guide, and post-stay follow-up are not Mailchimp campaigns. They are transactional emails that carry the brand&mdash;designed in React Email, rendered to HTML, delivered via Resend&rsquo;s API.</p>
+
+      <p>The reason for Resend over SendGrid or Postmark is simple: React Email components let us build email templates with the same design system as the platform itself. Same typeface loaded via web-safe fallbacks, same colour tokens, same typographic rhythm. The email a guest receives 48 hours before arrival looks like it came from the same place as the website they booked on.</p>
+
+      <h2>Vercel — deployment</h2>
+
+      <p>Vercel is the correct deployment target for a Next.js platform with edge functions and image optimisation requirements. The preview URL workflow also matters during the build: the estate owner can review every change in a live preview environment before it goes to production, without any technical involvement on their part.</p>
+
+      <p>The full platform&mdash;website, booking engine, guest portal, owner dashboard&mdash;deploys from a single git push. Zero-downtime. No server management. No infrastructure decisions.</p>
+
+      <div class="post-cta">
+        <p>Working on an estate? Let&rsquo;s talk.</p>
+        <a href="/contact.html" class="btn btn-primary">Book a discovery call &rarr;</a>
+      </div>
+
+      <div class="related-posts">
+        <p class="eyebrow">Related</p>
+        <ul class="related-list">
+          <li><a href="/journal/building-a-booking-engine.html">Building a reservation engine without a SaaS &rarr;</a></li>
+          <li><a href="/work/solaire.html">Solaire Vail case study &rarr;</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="/js/main.js"></script>
+</body>
+</html>

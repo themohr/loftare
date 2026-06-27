@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loftare Studio â€” Private Booking Platforms for Ultra-Luxury Estates</title>
+  <meta name="description" content="We build bespoke direct-booking platforms for ultra-luxury vacation estates. One property, one platform. Starting at $4,500.">
+  <link rel="canonical" href="https://loftare.studio/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Loftare Studio â€” Private Booking Platforms for Ultra-Luxury Estates">
+  <meta property="og:description" content="We build bespoke direct-booking platforms for ultra-luxury vacation estates. One property, one platform. Starting at $4,500.">
+  <meta property="og:url" content="https://loftare.studio/">
+  <meta property="og:type" content="website">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Loftare Studio",
+    "url": "https://loftare.studio",
+    "description": "Private booking platforms for ultra-luxury vacation estates",
+    "email": "dennis@loftare.studio",
+    "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO" }
+  }
+  </script>
+
+  <!-- Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400&display=swap"></noscript>
+  <style>*{margin:0;padding:0;box-sizing:border-box}:root{--pitch:#111210;--linen:#F2EFE9;--ember:#B5541E;--snow:#FFFFFF}body{font-family:'DM Sans',system-ui,sans-serif;background:var(--pitch);color:var(--snow)}.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;background-image:url('/images/hero-bg2.webp');background-size:cover;background-position:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.60) 50%,rgba(0,0,0,0.82) 100%)}.hero-inner{position:relative;z-index:2;text-align:center;padding:0 24px}</style>
+  <link rel="stylesheet" href="/css/styles.min.css">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="eyebrow hero-eyebrow reveal" style="transition-delay:0ms;font-family:var(--font-mono)">One property. One platform. No platform fees.</p>
+
+    <h1 class="display display-xl hero-headline reveal" style="transition-delay:200ms">
+      Airbnb took 15.5%.<br>See how much you can save.
+    </h1>
+
+    <p class="hero-subhead reveal" style="transition-delay:400ms">
+      We build private direct-booking platforms for ultra-luxury estates.
+    </p>
+
+    <!-- Calculator -->
+    <div class="calculator reveal" style="transition-delay:600ms" role="region" aria-label="Platform fee calculator">
+      <p class="calc-label">What are you giving Airbnb?</p>
+
+      <div class="calc-input-row">
+        <span class="calc-dollar" aria-hidden="true">$</span>
+        <input
+          type="text"
+          inputmode="numeric"
+          id="calc-input"
+          class="calc-input"
+          placeholder="Enter your annual revenue"
+          aria-label="Annual booking revenue in dollars"
+          autocomplete="off"
+        >
+      </div>
+
+      <div class="calc-result" id="calc-result" aria-live="polite" aria-atomic="true">
+        <span class="calc-placeholder" id="calc-placeholder">Your booking fees</span>
+        <span class="calc-result-primary mono" id="calc-primary" style="display:none"></span>
+        <span class="calc-result-secondary mono" id="calc-secondary" style="display:none"></span>
+      </div>
+
+      <div class="calc-cta" id="calc-cta">
+        <a href="/contact.html" class="btn btn-primary">Book a discovery call &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="section-problem">
+  <div class="problem-grid reveal">
+    <div>
+      <blockquote class="display display-sm problem-quote">
+        &ldquo;Your guests remember the estate. Make sure they remember how to find you.&rdquo;
+      </blockquote>
+    </div>
+    <div class="problem-body">
+      <p>Every time a guest books through Airbnb, the platform captures their name, email, payment history, and future intent. You receive a confirmation and a payout minus 15.5%.</p>
+      <p>When that guest wants to return&mdash;and they will&mdash;they go back to Airbnb. You pay the fee again. You still don&rsquo;t know their email address.</p>
+      <p>For an estate generating $500,000 a year in bookings, that&rsquo;s $77,500 in fees&mdash;on guests who may already know and love the property.</p>
+    </div>
+  </div>
+
+  <div class="stat-strip reveal">
+    <div class="stat-card">
+      <span class="stat-value mono">$77,500</span>
+      <span class="stat-label">Given to Airbnb on $500K revenue</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value mono">0</span>
+      <span class="stat-label">Guest email addresses you own</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value mono">15.5%</span>
+      <span class="stat-label">The current Airbnb host fee on every booking&mdash;applied to every guest, every stay, every year.</span>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="section-solution">
+  <div class="solution-grid section-inner reveal">
+    <div class="solution-demo">
+      <a href="https://solairevail.vercel.app" target="_blank" rel="noopener" class="solution-demo-link" aria-label="View Solaire Vail live platform">
+        <div class="solution-demo-image">
+          <picture><source srcset="/images/solaire-preview.webp" type="image/webp"><img src="/images/solaire-preview.jpg" alt="Solaire — a private estate booking platform built by Loftare Studio" onerror="this.parentElement.classList.add('no-image')"></picture>
+          <div class="solution-demo-overlay">
+            <span class="solution-demo-visit">View live site &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <p class="solution-demo-label">Solaire &mdash; Vail, Colorado</p>
+    </div>
+    <div class="solution-content">
+      <h2 class="display display-sm">One estate. One platform. Entirely yours.</h2>
+      <p>This is what we build. A private direct-booking platform designed for one property&mdash;not a template, not a SaaS subscription, not a listing on someone else&rsquo;s marketplace.</p>
+      <p>Your guests book directly. You capture their contact information. When Christmas week opens next season, you email the twelve families who stayed last year. No platform. No commission. No intermediary.</p>
+      <ul class="feature-list">
+        <li>Private branded website&mdash;your domain, your identity</li>
+        <li>Direct booking engine&mdash;calendar, inquiry flow, deposit collection</li>
+        <li>Guest portal&mdash;arrival guide, local map, concierge requests</li>
+        <li>Owner dashboard&mdash;bookings, calendar, guest history</li>
+      </ul>
+      <a href="/work.html" class="btn btn-ghost">See a live example &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY TEASER -->
+<section class="section-case">
+  <div class="case-inner">
+    <div class="case-header reveal">
+      <p class="eyebrow">Demonstration Platform &mdash; Solaire Vail</p>
+      <h2 class="display display-md" style="margin-top:16px;color:var(--pitch)">
+        A private estate platform. Built to show exactly what&rsquo;s possible.
+      </h2>
+    </div>
+
+    <div class="case-grid reveal">
+      <div class="case-body-col">
+        <p style="margin-top:0;color:var(--graphite);font-size:17px;line-height:1.75">
+          Solaire is a complete demonstration platform&mdash;built by Loftare Studio to show exactly what a private direct-booking estate site looks and feels like at the highest tier. Every feature works. The site is live.
+        </p>
+        <p style="margin-top:16px;color:var(--graphite);font-size:17px;line-height:1.75">
+          The figures to the right reflect documented Airbnb host pricing at current rates, applied to a Vail estate operating at $1.5M in annual bookings. They are not client-reported data&mdash;they are industry facts any estate owner can verify.
+        </p>
+      </div>
+      <div class="case-stat-callout">
+        <div class="case-stat">
+          <div class="case-stat-value mono">$230K</div>
+          <div class="case-stat-label">Annual platform fees at 15.5% on $1.5M revenue</div>
+        </div>
+        <div class="case-stat">
+          <div class="case-stat-value mono">0</div>
+          <div class="case-stat-label">Guest email addresses Airbnb shares with hosts after a booking</div>
+        </div>
+        <a href="/work.html" class="btn btn-outline" style="margin-top:8px">View the full demo &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section-process">
+  <div class="process-header reveal">
+    <p class="eyebrow">A SIMPLE PROCESS</p>
+  </div>
+  <div class="process-steps reveal">
+    <div class="process-step">
+      <div class="step-number">01</div>
+      <div class="step-label">Discovery</div>
+      <p class="step-desc">One conversation. We learn your property, your guests, and exactly what a direct booking channel would mean for your estate. No proposal until we both know it&rsquo;s right.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-number">02</div>
+      <div class="step-label">Design</div>
+      <p class="step-desc">Your estate has a character. We find it and build a digital identity around it. No templates. No themes. Nothing that looks like anyone else&rsquo;s property.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-number">03</div>
+      <div class="step-label">Build</div>
+      <p class="step-desc">4&ndash;6 weeks. A complete private platform&mdash;your site, your booking engine, your guest portal, your dashboard. Everything working before we hand it over.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-number">04</div>
+      <div class="step-label">Launch</div>
+      <p class="step-desc">Live on your domain. Your guests book direct from day one. The platform is yours&mdash;the code, the data, the relationships. No ongoing license. No platform between you and your guests.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section-final-cta">
+  <div class="final-cta-inner reveal">
+    <h2 class="display display-lg">Your guests deserve to know where they stayed.</h2>
+    <p class="final-cta-subhead">One property. One platform. Built around your estate.</p>
+    <a href="/contact.html" class="btn btn-primary" style="font-size:16px;padding:16px 36px">Book a discovery call &rarr;</a>
+    <p class="final-cta-note">Most estate owners recoup the build cost within a single direct booking season.</p>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="/js/main.js" defer></script>
+</body>
+</html>
+
+

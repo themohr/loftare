@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building a reservation engine without a SaaS — Loftare Journal</title>
+  <meta name="description" content="Why we built the calendar, the availability logic, and the deposit flow from scratch instead of reaching for a SaaS provider.">
+  <link rel="canonical" href="https://loftare.studio/journal/building-a-booking-engine">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Building a reservation engine without a SaaS",
+    "author": { "@type": "Person", "name": "Dennis Mohr" },
+    "publisher": { "@type": "Organization", "name": "Loftare Studio", "url": "https://loftare.studio" },
+    "datePublished": "2025-11-18",
+    "description": "Why we built the calendar, the availability logic, and the deposit flow from scratch."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="post-hero">
+  <div class="content-narrow">
+    <div class="post-hero-meta reveal">
+      <span class="post-tag">Dev UX</span>
+      <span class="post-date mono">November 18, 2025</span>
+      <span class="post-read-time mono">8 min read</span>
+    </div>
+    <h1 class="display display-md reveal" style="transition-delay:100ms">Building a reservation engine without a SaaS</h1>
+    <p class="reveal" style="transition-delay:200ms;font-size:18px;color:var(--muted);margin-top:20px;line-height:1.65">Why we built the calendar, the availability logic, and the deposit flow from scratch.</p>
+  </div>
+</div>
+
+<section class="section-post-body">
+  <div class="section-inner">
+    <div class="post-body reveal">
+
+      <p>The first question on every platform build is the same: do we reach for a SaaS booking engine, or do we build our own? The answer, for ultra-luxury estates, is almost always to build.</p>
+
+      <p>Here is why.</p>
+
+      <h2>The SaaS problem for ultra-luxury</h2>
+
+      <p>Booking SaaS providers&mdash;Lodgify, Hostfully, Guesty, and their cousins&mdash;are built for scale. They are optimised for a host managing twelve properties across four platforms, where the goal is workflow efficiency, not guest experience quality.</p>
+
+      <p>For an estate generating $5,000 per night, the booking flow is not a workflow problem. It is a brand touchpoint. Every field, every confirmation email, every deposit request is a signal to the guest about the caliber of what they are booking into. A generic SaaS widget embeds a different brand&rsquo;s assumptions into that moment.</p>
+
+      <p>Beyond aesthetics: most SaaS providers retain some portion of the relationship. They hold the availability data, the pricing rules, or the guest communication history behind their own API. The estate owner never fully owns the stack.</p>
+
+      <h2>What we built instead</h2>
+
+      <p>For Solaire, we built a reservation engine in three parts: availability state, the booking flow, and deposit handling.</p>
+
+      <p><strong>Availability state</strong> lives in Sanity as a structured document. Blocked dates, minimum stays, pricing overrides by season&mdash;all managed through a clean owner dashboard with no technical knowledge required. iCal export syncs the calendar to any platform the estate still lists on.</p>
+
+      <p><strong>The booking flow</strong> is a four-step sequence: date selection, guest details, deposit review, confirmation. Each step is a server component with no third-party scripts. The confirmation email is sent via Resend with a template that matches the platform&rsquo;s design language exactly&mdash;same typeface, same palette, same voice.</p>
+
+      <p><strong>Deposit handling</strong> is Stripe Payment Intents with a configurable deposit percentage. The estate owner sets the deposit amount in the dashboard. Stripe handles PCI compliance. Funds go directly to the estate&rsquo;s connected account. There is no intermediary holding the money.</p>
+
+      <h2>The iCal sync detail</h2>
+
+      <p>Most estates don&rsquo;t abandon their platform listings on day one of launching a direct channel. The direct channel is built in parallel&mdash;it captures returning guests and direct inquiries while the platform listings continue to generate discovery traffic.</p>
+
+      <p>This creates a double-booking risk if availability is not synchronized. We solve it with iCal: Solaire exports a live feed that Airbnb, VRBO, and any other platform can subscribe to. When a guest books directly, the dates block automatically across all platforms within the sync interval (typically 15&ndash;60 minutes, depending on the platform).</p>
+
+      <p>It is not real-time, but it is sufficient. Ultra-luxury estates rarely see competing bookings in the same 15-minute window.</p>
+
+      <h2>What the owner actually experiences</h2>
+
+      <p>The dashboard is a single page: a calendar with booking state, an inquiry list, and a guest history table. No vendor onboarding. No seats. No per-booking fees to a SaaS provider.</p>
+
+      <p>When a new booking arrives, the owner gets an email. When a guest checks out, a post-stay email goes out automatically&mdash;a thank-you, a direct booking link for next season, and a soft request for a review. The email is written in the estate&rsquo;s voice, not Airbnb&rsquo;s.</p>
+
+      <p>The build cost is higher than a SaaS integration. The ongoing cost is zero. The brand fidelity is complete. For this tier, that calculus is straightforward.</p>
+
+      <div class="post-cta">
+        <p>Working on an estate? Let&rsquo;s talk.</p>
+        <a href="/contact.html" class="btn btn-primary">Book a discovery call &rarr;</a>
+      </div>
+
+      <div class="related-posts">
+        <p class="eyebrow">Related</p>
+        <ul class="related-list">
+          <li><a href="/journal/the-stack-behind-solaire.html">The stack behind Solaire Vail &rarr;</a></li>
+          <li><a href="/work/solaire.html">Solaire Vail case study &rarr;</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="/js/main.js"></script>
+</body>
+</html>
