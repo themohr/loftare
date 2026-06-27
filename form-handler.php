@@ -29,8 +29,9 @@ $to      = 'dennis@loftare.studio';
 $subject = 'New inquiry from ' . $name;
 $body    = "Name: $name\nEmail: $email\n\nMessage:\n$message";
 $headers = implode("\r\n", [
-    'From: noreply@loftare.studio',
+    'From: dennis@loftare.studio',
     'Reply-To: ' . $email,
+    'X-Mailer: PHP/mail',
     'Content-Type: text/plain; charset=UTF-8',
 ]);
 
