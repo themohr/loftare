@@ -1,33 +1,40 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loftare Studio — Private Booking Platforms for Ultra-Luxury Estates</title>
-  <meta name="description" content="We build bespoke direct-booking platforms for ultra-luxury vacation estates. One property, one platform. Starting at $4,500.">
+  <title>Custom Vacation Rental Website Builder for Luxury Estates — Loftare Studio</title>
+  <meta name="description" content="Loftare Studio builds custom direct booking websites for ultra-luxury vacation estates. Own your guest data. No platform fees. Starting at $4,500.">
   <link rel="canonical" href="https://loftare.studio/">
-
   <!-- Open Graph -->
-  <meta property="og:title" content="Loftare Studio — Private Booking Platforms for Ultra-Luxury Estates">
-  <meta property="og:description" content="We build bespoke direct-booking platforms for ultra-luxury vacation estates. One property, one platform. Starting at $4,500.">
+  <meta property="og:title" content="Custom Vacation Rental Website Builder for Luxury Estates — Loftare Studio">
+  <meta property="og:description" content="Loftare Studio builds custom direct booking websites for ultra-luxury vacation estates. Own your guest data. No platform fees. Starting at $4,500.">
   <meta property="og:url" content="https://loftare.studio/">
   <meta property="og:type" content="website">
-
+  <meta property="og:image" content="https://loftare.studio/images/hero-bg2.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Custom Vacation Rental Website Builder for Luxury Estates — Loftare Studio">
+  <meta name="twitter:description" content="Loftare Studio builds custom direct booking websites for ultra-luxury vacation estates. Own your guest data. No platform fees. Starting at $4,500.">
+  <meta name="twitter:image" content="https://loftare.studio/images/hero-bg2.webp">
   <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "ProfessionalService",
     "name": "Loftare Studio",
     "url": "https://loftare.studio",
-    "description": "Private booking platforms for ultra-luxury vacation estates",
-    "email": "dennis@loftare.studio",
-    "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO" }
+    "description": "Loftare Studio builds custom direct booking websites for ultra-luxury vacation estates. One property, one platform.",
+    "founder": { "@type": "Person", "name": "Dennis Mohr" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
+    "areaServed": "US",
+    "priceRange": "$4,500–$24,000+",
+    "knowsAbout": ["vacation rental websites", "direct booking platforms", "luxury estate websites", "short term rental websites"],
+    "sameAs": ["https://x.com/loftare"]
   }
   </script>
-
   <!-- Fonts -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="/images/hero-bg2.webp">
@@ -37,9 +44,10 @@
   <style>*{margin:0;padding:0;box-sizing:border-box}:root{--pitch:#111210;--linen:#F2EFE9;--ember:#B5541E;--snow:#FFFFFF}body{font-family:'DM Sans',system-ui,sans-serif;background:var(--pitch);color:var(--snow)}.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.60) 50%,rgba(0,0,0,0.82) 100%)}.hero-inner{position:relative;z-index:2;text-align:center;padding:0 24px}</style>
   <link rel="stylesheet" href="/css/styles.min.css">
 </head>
-<body>
 
+<body>
 <nav id="site-nav">
+
   <a href="/" class="nav-wordmark">Loftare Studio</a>
   <ul class="nav-links">
     <li><a href="/work.html">Work</a></li>
@@ -51,9 +59,10 @@
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
-</nav>
 
+</nav>
 <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation">
+
   <button class="mobile-close" id="mobile-close" aria-label="Close menu">&times;</button>
   <a href="/work.html">Work</a>
   <a href="/services.html">Services</a>
@@ -64,23 +73,20 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img src="/images/hero-bg2.webp" alt="" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+
+  <img src="/images/hero-bg2.webp" alt="Luxury vacation estate — Loftare Studio direct booking platform" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-inner">
     <p class="eyebrow hero-eyebrow reveal" style="transition-delay:0ms;font-family:var(--font-mono)">One property. One platform. No platform fees.</p>
-
     <h1 class="display display-xl hero-headline reveal" style="transition-delay:200ms">
       Airbnb took 15.5%.<br>See how much you can save.
     </h1>
-
     <p class="hero-subhead reveal" style="transition-delay:400ms">
       We build private direct-booking platforms for ultra-luxury estates.
     </p>
-
     <!-- Calculator -->
     <div class="calculator reveal" style="transition-delay:600ms" role="region" aria-label="Platform fee calculator">
       <p class="calc-label">What are you giving Airbnb?</p>
-
       <div class="calc-input-row">
         <span class="calc-dollar" aria-hidden="true">$</span>
         <input
@@ -93,21 +99,20 @@
           autocomplete="off"
         >
       </div>
-
       <div class="calc-result" id="calc-result" aria-live="polite" aria-atomic="true">
         <span class="calc-placeholder" id="calc-placeholder">Your booking fees</span>
         <span class="calc-result-primary mono" id="calc-primary" style="display:none"></span>
         <span class="calc-result-secondary mono" id="calc-secondary" style="display:none"></span>
       </div>
-
       <div class="calc-cta" id="calc-cta">
         <a href="/contact.html" class="btn btn-primary">Book a discovery call &rarr;</a>
       </div>
     </div>
   </div>
-</section>
 
+</section>
 <!-- PROBLEM -->
+
 <section class="section-problem">
   <div class="problem-grid reveal">
     <div>
@@ -121,7 +126,6 @@
       <p>For an estate generating $500,000 a year in bookings, that&rsquo;s $77,500 in fees&mdash;on guests who may already know and love the property.</p>
     </div>
   </div>
-
   <div class="stat-strip reveal">
     <div class="stat-card">
       <span class="stat-value mono">$77,500</span>
@@ -140,6 +144,7 @@
 
 <!-- SOLUTION -->
 <section class="section-solution">
+
   <div class="solution-grid section-inner reveal">
     <div class="solution-demo">
       <a href="https://solairevail.vercel.app" target="_blank" rel="noopener" class="solution-demo-link" aria-label="View Solaire Vail live platform">
@@ -165,9 +170,10 @@
       <a href="/work.html" class="btn btn-ghost">See a live example &rarr;</a>
     </div>
   </div>
-</section>
 
+</section>
 <!-- CASE STUDY TEASER -->
+
 <section class="section-case">
   <div class="case-inner">
     <div class="case-header reveal">
@@ -176,7 +182,6 @@
         A private estate platform. Built to show exactly what&rsquo;s possible.
       </h2>
     </div>
-
     <div class="case-grid reveal">
       <div class="case-body-col">
         <p style="margin-top:0;color:var(--graphite);font-size:17px;line-height:1.75">
@@ -199,9 +204,10 @@
       </div>
     </div>
   </div>
-</section>
 
+</section>
 <!-- PROCESS -->
+
 <section class="section-process">
   <div class="process-header reveal">
     <p class="eyebrow">A SIMPLE PROCESS</p>
@@ -228,9 +234,10 @@
       <p class="step-desc">Live on your domain. Your guests book direct from day one. The platform is yours&mdash;the code, the data, the relationships. No ongoing license. No platform between you and your guests.</p>
     </div>
   </div>
-</section>
 
+</section>
 <!-- FINAL CTA -->
+
 <section class="section-final-cta">
   <div class="final-cta-inner reveal">
     <h2 class="display display-lg">Your guests deserve to know where they stayed.</h2>
@@ -242,7 +249,7 @@
 
 <div id="footer-placeholder"></div>
 <script src="/js/main.js" defer></script>
+
 </body>
 </html>
-
 
