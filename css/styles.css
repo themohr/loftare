@@ -392,10 +392,6 @@ section {
 
 /* Hero */
 .hero {
-  background-image: url('../images/hero-bg2.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: var(--pitch);
   width: 100vw;
   min-height: 100vh;

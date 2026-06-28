@@ -34,7 +34,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400&display=swap"></noscript>
-  <style>*{margin:0;padding:0;box-sizing:border-box}:root{--pitch:#111210;--linen:#F2EFE9;--ember:#B5541E;--snow:#FFFFFF}body{font-family:'DM Sans',system-ui,sans-serif;background:var(--pitch);color:var(--snow)}.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;background-image:url('/images/hero-bg2.webp');background-size:cover;background-position:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.60) 50%,rgba(0,0,0,0.82) 100%)}.hero-inner{position:relative;z-index:2;text-align:center;padding:0 24px}</style>
+  <style>*{margin:0;padding:0;box-sizing:border-box}:root{--pitch:#111210;--linen:#F2EFE9;--ember:#B5541E;--snow:#FFFFFF}body{font-family:'DM Sans',system-ui,sans-serif;background:var(--pitch);color:var(--snow)}.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.60) 50%,rgba(0,0,0,0.82) 100%)}.hero-inner{position:relative;z-index:2;text-align:center;padding:0 24px}</style>
   <link rel="stylesheet" href="/css/styles.min.css">
 </head>
 <body>
@@ -64,6 +64,7 @@
 
 <!-- HERO -->
 <section class="hero">
+  <img src="/images/hero-bg2.webp" alt="" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-inner">
     <p class="eyebrow hero-eyebrow reveal" style="transition-delay:0ms;font-family:var(--font-mono)">One property. One platform. No platform fees.</p>
