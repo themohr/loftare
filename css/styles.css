@@ -1580,7 +1580,6 @@ section {
   color: var(--muted);
   font-family: var(--font-mono);
   white-space: nowrap;
-  padding-top: 36px;
 }
 
 /* ============================================================
@@ -1793,8 +1792,6 @@ section {
   .post-cta { flex-direction: column; align-items: flex-start; }
 
   .journal-post-card { grid-template-columns: 1fr; }
-  .post-read-time { padding-top: 0; }
-
   .work-card-body { padding: 28px; }
 
   .public-links { flex-direction: column; gap: 12px; }
