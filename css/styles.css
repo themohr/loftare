@@ -1713,12 +1713,14 @@ section {
 
 .location-calc-wrap {
   width: 100%;
-  max-width: 480px;
+  max-width: 620px;
+  margin: 0 auto;
 }
 
 .location-hero .eyebrow { margin-bottom: 16px; }
 .location-hero .display-lg { color: var(--snow); margin-bottom: 20px; }
 .location-hero p { font-size: 18px; color: var(--muted); max-width: 520px; margin: 0 auto; }
+.location-hero .calc-label { font-size: 13px; color: rgba(255,255,255,0.60); max-width: none; margin-bottom: 16px; }
 
 .section-location-body {
   background: var(--linen);
