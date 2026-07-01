@@ -472,20 +472,20 @@ section {
 .calc-shell::after {
   content: '';
   position: absolute;
-  left: -2px;
-  top: -2px;
+  left: -1px;
+  top: -1px;
   border-radius: 8px;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
   z-index: -1;
-  background: linear-gradient(45deg, #111210, #6b2d0d, #B5541E, #e8824a, #f2c4a0, #B5541E, #6b2d0d, #111210, #6b2d0d, #B5541E);
+  background: linear-gradient(45deg, #1a1814, #2e1508, #6b2d0d, #B5541E, #d4733a, #B5541E, #6b2d0d, #2e1508, #1a1814);
   background-size: 400%;
-  animation: ember-move 12s linear infinite;
+  animation: ember-move 16s linear infinite;
 }
 
 .calc-shell::after {
-  filter: blur(14px);
-  opacity: 0.7;
+  filter: blur(8px);
+  opacity: 0.45;
 }
 
 .calc-label {
@@ -1770,20 +1770,20 @@ section {
 .calc-shell::after {
   content: '';
   position: absolute;
-  left: -2px;
-  top: -2px;
+  left: -1px;
+  top: -1px;
   border-radius: 8px;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
   z-index: -1;
-  background: linear-gradient(45deg, #111210, #6b2d0d, #B5541E, #e8824a, #f2c4a0, #B5541E, #6b2d0d, #111210, #6b2d0d, #B5541E);
+  background: linear-gradient(45deg, #1a1814, #2e1508, #6b2d0d, #B5541E, #d4733a, #B5541E, #6b2d0d, #2e1508, #1a1814);
   background-size: 400%;
-  animation: ember-move 12s linear infinite;
+  animation: ember-move 16s linear infinite;
 }
 
 .calc-shell::after {
-  filter: blur(14px);
-  opacity: 0.7;
+  filter: blur(8px);
+  opacity: 0.45;
 }
 
 .calc-label { font-size: 13px; color: rgba(255,255,255,0.60); max-width: none; margin-bottom: 16px; }
