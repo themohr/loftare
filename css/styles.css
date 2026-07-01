@@ -1711,6 +1711,11 @@ section {
   text-align: center;
 }
 
+.location-calc-wrap {
+  width: 100%;
+  max-width: 480px;
+}
+
 .location-hero .eyebrow { margin-bottom: 16px; }
 .location-hero .display-lg { color: var(--snow); margin-bottom: 20px; }
 .location-hero p { font-size: 18px; color: var(--muted); max-width: 520px; margin: 0 auto; }
