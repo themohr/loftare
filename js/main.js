@@ -225,9 +225,6 @@ function initCalendly() {
 }
 
 /* --- Boot --------------------------------------------------- */
-// Reveal calc-shell immediately — script is deferred so DOM is ready
-document.querySelectorAll('.calc-shell').forEach(el => el.style.visibility = 'visible');
-
 document.addEventListener('DOMContentLoaded', () => {
   loadComponent('nav-placeholder', 'nav.html').then(() => {
     initNavScroll();

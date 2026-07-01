@@ -446,53 +446,13 @@ section {
 
 /* Calculator */
 .calculator {
-  background-color: var(--pitch);
-  position: relative;
-  z-index: 2;
+  background: rgba(0,0,0,0.45);
   border: 1px solid rgba(255,255,255,0.25);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 36px;
   text-align: left;
-}
-
-
-@keyframes ember-move {
-  0%   { background-position: 0 0; opacity: 1; }
-  50%  { background-position: 400% 0; }
-  100% { background-position: 0 0; }
-}
-
-.calc-shell {
-  position: relative;
-  z-index: 1;
-  border-radius: 6px;
-  isolation: isolate;
-  visibility: hidden;
-}
-
-.calc-shell::before,
-.calc-shell::after {
-  content: '';
-  position: absolute;
-  left: -1px;
-  top: -1px;
-  border-radius: 8px;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  z-index: -1;
-  background: linear-gradient(45deg, #1a1814, #2e1508, #6b2d0d, #B5541E, #d4733a, #B5541E, #6b2d0d, #2e1508, #1a1814);
-  background-size: 400%;
-  animation: ember-move 16s linear infinite;
-  animation-delay: 150ms;
-  will-change: background-position;
-  opacity: 0;
-}
-
-.calc-shell::after {
-  filter: blur(8px);
-  opacity: 0.45;
 }
 
 .calc-label {
@@ -1762,42 +1722,6 @@ section {
 .location-hero p { font-size: 18px; color: var(--muted); max-width: 520px; margin: 0 auto; }
 .location-hero .calc-label { font-size: 13px; color: rgba(255,255,255,0.60); max-width: none; margin-bottom: 16px; }
 .location-hero 
-@keyframes ember-move {
-  0%   { background-position: 0 0; opacity: 1; }
-  50%  { background-position: 400% 0; }
-  100% { background-position: 0 0; }
-}
-
-.calc-shell {
-  position: relative;
-  z-index: 1;
-  border-radius: 6px;
-  isolation: isolate;
-  visibility: hidden;
-}
-
-.calc-shell::before,
-.calc-shell::after {
-  content: '';
-  position: absolute;
-  left: -1px;
-  top: -1px;
-  border-radius: 8px;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  z-index: -1;
-  background: linear-gradient(45deg, #1a1814, #2e1508, #6b2d0d, #B5541E, #d4733a, #B5541E, #6b2d0d, #2e1508, #1a1814);
-  background-size: 400%;
-  animation: ember-move 16s linear infinite;
-  animation-delay: 150ms;
-  will-change: background-position;
-  opacity: 0;
-}
-
-.calc-shell::after {
-  filter: blur(8px);
-  opacity: 0.45;
-}
 
 .calc-label { font-size: 13px; color: rgba(255,255,255,0.60); max-width: none; margin-bottom: 16px; }
 
