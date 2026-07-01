@@ -459,7 +459,7 @@ section {
 
 
 @keyframes ember-move {
-  0%   { background-position: 0 0; }
+  0%   { background-position: 0 0; opacity: 1; }
   50%  { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
@@ -484,7 +484,9 @@ section {
   background: linear-gradient(45deg, #1a1814, #2e1508, #6b2d0d, #B5541E, #d4733a, #B5541E, #6b2d0d, #2e1508, #1a1814);
   background-size: 400%;
   animation: ember-move 16s linear infinite;
+  animation-delay: 150ms;
   will-change: background-position;
+  opacity: 0;
 }
 
 .calc-shell::after {
@@ -1760,7 +1762,7 @@ section {
 .location-hero .calc-label { font-size: 13px; color: rgba(255,255,255,0.60); max-width: none; margin-bottom: 16px; }
 .location-hero 
 @keyframes ember-move {
-  0%   { background-position: 0 0; }
+  0%   { background-position: 0 0; opacity: 1; }
   50%  { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
@@ -1785,7 +1787,9 @@ section {
   background: linear-gradient(45deg, #1a1814, #2e1508, #6b2d0d, #B5541E, #d4733a, #B5541E, #6b2d0d, #2e1508, #1a1814);
   background-size: 400%;
   animation: ember-move 16s linear infinite;
+  animation-delay: 150ms;
   will-change: background-position;
+  opacity: 0;
 }
 
 .calc-shell::after {
