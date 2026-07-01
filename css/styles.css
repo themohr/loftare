@@ -446,13 +446,46 @@ section {
 
 /* Calculator */
 .calculator {
-  background: rgba(0,0,0,0.45);
+  background: var(--pitch);
   border: 1px solid rgba(255,255,255,0.25);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 36px;
   text-align: left;
+}
+
+
+@keyframes ember-move {
+  0%   { background-position: 0 0; }
+  50%  { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.calc-shell {
+  position: relative;
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.calc-shell::before,
+.calc-shell::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border-radius: 8px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  background: linear-gradient(45deg, #111210, #6b2d0d, #B5541E, #e8824a, #f2c4a0, #B5541E, #6b2d0d, #111210, #6b2d0d, #B5541E);
+  background-size: 400%;
+  animation: ember-move 12s linear infinite;
+}
+
+.calc-shell::after {
+  filter: blur(14px);
+  opacity: 0.7;
 }
 
 .calc-label {
@@ -1720,7 +1753,40 @@ section {
 .location-hero .eyebrow { margin-bottom: 16px; }
 .location-hero .display-lg { color: var(--snow); margin-bottom: 20px; }
 .location-hero p { font-size: 18px; color: var(--muted); max-width: 520px; margin: 0 auto; }
-.location-hero .calc-label { font-size: 13px; color: rgba(255,255,255,0.60); max-width: none; margin-bottom: 16px; }
+.location-hero 
+@keyframes ember-move {
+  0%   { background-position: 0 0; }
+  50%  { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.calc-shell {
+  position: relative;
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.calc-shell::before,
+.calc-shell::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border-radius: 8px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  background: linear-gradient(45deg, #111210, #6b2d0d, #B5541E, #e8824a, #f2c4a0, #B5541E, #6b2d0d, #111210, #6b2d0d, #B5541E);
+  background-size: 400%;
+  animation: ember-move 12s linear infinite;
+}
+
+.calc-shell::after {
+  filter: blur(14px);
+  opacity: 0.7;
+}
+
+.calc-label { font-size: 13px; color: rgba(255,255,255,0.60); max-width: none; margin-bottom: 16px; }
 
 .section-location-body {
   background: var(--linen);
