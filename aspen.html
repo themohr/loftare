@@ -19,10 +19,21 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Private Booking Platform for Aspen Luxury Estates",
-    "provider": { "@type": "Organization", "name": "Loftare Studio", "url": "https://loftare.studio" },
-    "areaServed": { "@type": "City", "name": "Aspen", "containedInPlace": { "@type": "State", "name": "Colorado" } },
-    "description": "Bespoke direct-booking platforms for ultra-luxury vacation estates in Aspen, Colorado"
+    "name": "Direct Booking Platform for Aspen Luxury Estates",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Loftare Studio",
+      "url": "https://loftare.studio",
+      "email": "dennis@loftare.studio"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Aspen",
+      "containedInPlace": { "@type": "State", "name": "Colorado" }
+    },
+    "description": "Loftare Studio builds private direct-booking platforms for ultra-luxury vacation estates in Aspen and Snowmass. One property, one platform. Starting at $4,500.",
+    "url": "https://loftare.studio/aspen.html",
+    "serviceType": "Direct Booking Platform"
   }
   </script>
 
@@ -37,9 +48,25 @@
 <div id="nav-placeholder"></div>
 
 <div class="location-hero">
-  <p class="eyebrow reveal" style="margin-bottom:16px">Aspen, Colorado</p>
+  <p class="eyebrow reveal" style="margin-bottom:16px;font-family:var(--font-mono)">Aspen, Colorado</p>
   <h1 class="display display-lg reveal" style="transition-delay:100ms">Private booking platforms<br>for Aspen luxury estates.</h1>
   <p class="reveal" style="transition-delay:200ms">Aspen estate owners are among the highest-volume rental operators in the country. The platform fee is their largest controllable expense.</p>
+
+    <div class="calculator reveal" style="transition-delay:500ms;margin-top:40px" role="region" aria-label="Platform fee calculator">
+      <p class="calc-label">What are you giving Airbnb?</p>
+      <div class="calc-input-row">
+        <span class="calc-dollar" aria-hidden="true">$</span>
+        <input type="text" inputmode="numeric" id="calc-input" class="calc-input" placeholder="Enter your annual revenue" aria-label="Annual booking revenue in dollars" autocomplete="off">
+      </div>
+      <div class="calc-result" id="calc-result" aria-live="polite" aria-atomic="true">
+        <span class="calc-placeholder" id="calc-placeholder">Your booking fees</span>
+        <span class="calc-result-primary mono" id="calc-primary" style="display:none"></span>
+        <span class="calc-result-secondary mono" id="calc-secondary" style="display:none"></span>
+      </div>
+      <div class="calc-cta" id="calc-cta">
+        <a href="/contact.html" class="btn btn-primary">Book a discovery call &rarr;</a>
+      </div>
+    </div>
 </div>
 
 <section class="section-location-body">
@@ -56,22 +83,6 @@
       <p>Loftare Studio builds private booking platforms for Aspen estates. One property. One platform. A direct channel that compounds in value with every season that passes and every guest relationship that strengthens.</p>
 
       <p>A discovery call is 30 minutes. We will cover your platform situation, the specific numbers for your estate, and what a direct channel would mean for your business.</p>
-    </div>
-
-    <div class="calculator reveal" style="max-width:560px;margin:48px auto 0" role="region" aria-label="Platform fee calculator">
-      <p class="calc-label" style="color:var(--graphite)">What are you giving the platforms?</p>
-      <div class="calc-input-row">
-        <span class="calc-dollar" style="background:var(--chalk);border-color:var(--chalk);color:var(--graphite)">$</span>
-        <input type="text" inputmode="numeric" id="calc-input" class="calc-input" placeholder="Enter your annual revenue" aria-label="Annual booking revenue" autocomplete="off" style="background:var(--snow);border-color:var(--chalk);color:var(--pitch)">
-      </div>
-      <div class="calc-result" id="calc-result" aria-live="polite" aria-atomic="true" style="background:rgba(181,84,30,0.06);border-color:rgba(181,84,30,0.2)">
-        <span class="calc-placeholder" id="calc-placeholder" style="color:var(--muted)">Enter your revenue above</span>
-        <span class="calc-result-primary mono" id="calc-primary" style="display:none"></span>
-        <span class="calc-result-secondary mono" id="calc-secondary" style="display:none"></span>
-      </div>
-      <div class="calc-cta" id="calc-cta">
-        <a href="/contact.html" class="btn btn-primary">Book a discovery call &rarr;</a>
-      </div>
     </div>
   </div>
 </section>

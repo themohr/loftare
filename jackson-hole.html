@@ -19,10 +19,21 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Private Booking Platform for Jackson Hole Estates",
-    "provider": { "@type": "Organization", "name": "Loftare Studio", "url": "https://loftare.studio" },
-    "areaServed": { "@type": "City", "name": "Jackson", "containedInPlace": { "@type": "State", "name": "Wyoming" } },
-    "description": "Bespoke direct-booking platforms for ultra-luxury vacation estates in Jackson Hole, Wyoming"
+    "name": "Direct Booking Platform for Jackson Hole Luxury Estates",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Loftare Studio",
+      "url": "https://loftare.studio",
+      "email": "dennis@loftare.studio"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Jackson Hole",
+      "containedInPlace": { "@type": "State", "name": "Wyoming" }
+    },
+    "description": "Loftare Studio builds private direct-booking platforms for ultra-luxury vacation estates in Jackson Hole. One property, one platform. Starting at $4,500.",
+    "url": "https://loftare.studio/jackson-hole.html",
+    "serviceType": "Direct Booking Platform"
   }
   </script>
 
@@ -37,9 +48,25 @@
 <div id="nav-placeholder"></div>
 
 <div class="location-hero">
-  <p class="eyebrow reveal" style="margin-bottom:16px">Jackson Hole, Wyoming</p>
+  <p class="eyebrow reveal" style="margin-bottom:16px;font-family:var(--font-mono)">Jackson Hole, Wyoming</p>
   <h1 class="display display-lg reveal" style="transition-delay:100ms">Private booking platforms<br>for Jackson Hole estates.</h1>
   <p class="reveal" style="transition-delay:200ms">Jackson Hole commands some of the highest nightly rates in North America. The estate owners here lose more to platform fees than most properties earn in a year.</p>
+
+    <div class="calculator reveal" style="transition-delay:500ms;margin-top:40px" role="region" aria-label="Platform fee calculator">
+      <p class="calc-label">What are you giving Airbnb?</p>
+      <div class="calc-input-row">
+        <span class="calc-dollar" aria-hidden="true">$</span>
+        <input type="text" inputmode="numeric" id="calc-input" class="calc-input" placeholder="Enter your annual revenue" aria-label="Annual booking revenue in dollars" autocomplete="off">
+      </div>
+      <div class="calc-result" id="calc-result" aria-live="polite" aria-atomic="true">
+        <span class="calc-placeholder" id="calc-placeholder">Your booking fees</span>
+        <span class="calc-result-primary mono" id="calc-primary" style="display:none"></span>
+        <span class="calc-result-secondary mono" id="calc-secondary" style="display:none"></span>
+      </div>
+      <div class="calc-cta" id="calc-cta">
+        <a href="/contact.html" class="btn btn-primary">Book a discovery call &rarr;</a>
+      </div>
+    </div>
 </div>
 
 <section class="section-location-body">
@@ -56,22 +83,6 @@
       <p>Loftare Studio builds private booking platforms for Jackson Hole estates. One property. One platform. A direct channel designed around your estate, your guests, and the specific nature of this market.</p>
 
       <p>A discovery call is 30 minutes. We will cover your current situation, the numbers specific to your estate, and what a direct booking channel looks like in practice.</p>
-    </div>
-
-    <div class="calculator reveal" style="max-width:560px;margin:48px auto 0" role="region" aria-label="Platform fee calculator">
-      <p class="calc-label" style="color:var(--graphite)">What are you giving the platforms?</p>
-      <div class="calc-input-row">
-        <span class="calc-dollar" style="background:var(--chalk);border-color:var(--chalk);color:var(--graphite)">$</span>
-        <input type="text" inputmode="numeric" id="calc-input" class="calc-input" placeholder="Enter your annual revenue" aria-label="Annual booking revenue" autocomplete="off" style="background:var(--snow);border-color:var(--chalk);color:var(--pitch)">
-      </div>
-      <div class="calc-result" id="calc-result" aria-live="polite" aria-atomic="true" style="background:rgba(181,84,30,0.06);border-color:rgba(181,84,30,0.2)">
-        <span class="calc-placeholder" id="calc-placeholder" style="color:var(--muted)">Enter your revenue above</span>
-        <span class="calc-result-primary mono" id="calc-primary" style="display:none"></span>
-        <span class="calc-result-secondary mono" id="calc-secondary" style="display:none"></span>
-      </div>
-      <div class="calc-cta" id="calc-cta">
-        <a href="/contact.html" class="btn btn-primary">Book a discovery call &rarr;</a>
-      </div>
     </div>
   </div>
 </section>
