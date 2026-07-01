@@ -446,7 +446,9 @@ section {
 
 /* Calculator */
 .calculator {
-  background: var(--pitch);
+  background-color: var(--pitch);
+  position: relative;
+  z-index: 2;
   border: 1px solid rgba(255,255,255,0.25);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -466,6 +468,7 @@ section {
   position: relative;
   z-index: 1;
   border-radius: 6px;
+  isolation: isolate;
 }
 
 .calc-shell::before,
@@ -481,6 +484,7 @@ section {
   background: linear-gradient(45deg, #1a1814, #2e1508, #6b2d0d, #B5541E, #d4733a, #B5541E, #6b2d0d, #2e1508, #1a1814);
   background-size: 400%;
   animation: ember-move 16s linear infinite;
+  will-change: background-position;
 }
 
 .calc-shell::after {
@@ -1765,6 +1769,7 @@ section {
   position: relative;
   z-index: 1;
   border-radius: 6px;
+  isolation: isolate;
 }
 
 .calc-shell::before,
@@ -1780,6 +1785,7 @@ section {
   background: linear-gradient(45deg, #1a1814, #2e1508, #6b2d0d, #B5541E, #d4733a, #B5541E, #6b2d0d, #2e1508, #1a1814);
   background-size: 400%;
   animation: ember-move 16s linear infinite;
+  will-change: background-position;
 }
 
 .calc-shell::after {
