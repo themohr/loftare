@@ -226,6 +226,8 @@ function initCalendly() {
 
 /* --- Boot --------------------------------------------------- */
 document.addEventListener('DOMContentLoaded', () => {
+  const shell = document.querySelector('.calc-shell');
+  if (shell) shell.style.visibility = 'visible';
   loadComponent('nav-placeholder', 'nav.html').then(() => {
     initNavScroll();
     initActiveNav();

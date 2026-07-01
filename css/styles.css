@@ -469,6 +469,7 @@ section {
   z-index: 1;
   border-radius: 6px;
   isolation: isolate;
+  visibility: hidden;
 }
 
 .calc-shell::before,
@@ -1772,6 +1773,7 @@ section {
   z-index: 1;
   border-radius: 6px;
   isolation: isolate;
+  visibility: hidden;
 }
 
 .calc-shell::before,
