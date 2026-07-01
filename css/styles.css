@@ -447,7 +447,8 @@ section {
 /* Calculator */
 .calculator {
   background: rgba(0,0,0,0.45);
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 1px solid rgba(181,84,30,0.85);
+  box-shadow: 0 0 9px rgb(181,84,30);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 4px;
