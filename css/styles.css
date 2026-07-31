@@ -1327,7 +1327,6 @@ section {
 
 .work-card-placeholder {
   background: var(--chalk);
-  border: 1px solid var(--chalk);
   border-radius: 3px;
   padding: 48px;
   text-align: center;
@@ -1336,7 +1335,7 @@ section {
 }
 
 .work-card-placeholder .eyebrow { margin-bottom: 16px; }
-.work-card-placeholder p { color: var(--muted); font-size: 15px; }
+.work-card-placeholder p { color: var(--graphite); font-size: 15px; }
 
 /* ============================================================
    CASE STUDY PAGE
