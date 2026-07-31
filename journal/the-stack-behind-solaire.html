@@ -69,13 +69,13 @@
 
       <h2>Next.js — the frame</h2>
 
-      <p>The choice of Next.js was not controversial. Server components, edge rendering, and the App Router give us the performance characteristics an ultra-luxury platform requires: fast first paint, clean URLs, and the ability to render booking state server-side without exposing availability logic to the client.</p>
+      <p>The choice of Next.js was not controversial. Server components, edge rendering, and the App Router give us the performance characteristics a direct booking platform requires: fast first paint, clean URLs, and the ability to render booking state server-side without exposing availability logic to the client.</p>
 
       <p>The key requirement was that the availability calendar and booking flow needed to be server-rendered with real-time data from Sanity, with no client-side fetch flickering. Next.js server components handle this cleanly. The guest sees a complete, accurate calendar on first load, not a skeleton that hydrates with a second request.</p>
 
       <h2>Sanity — the content layer</h2>
 
-      <p>Sanity is the only CMS that gives a non-technical owner a genuinely usable dashboard without requiring a custom admin build. The structured content model&mdash;availability documents, property configuration, seasonal pricing rules&mdash;is defined once and surfaced through Sanity Studio with field-level validation.</p>
+      <p>Sanity gives a non-technical owner a genuinely usable dashboard without requiring a custom admin build. The structured content model&mdash;availability documents, property configuration, seasonal pricing rules&mdash;is defined once and surfaced through Sanity Studio with field-level validation.</p>
 
       <p>The owner updates availability by clicking dates on a calendar. Pricing adjustments happen in a form field. No code deploys. No FTP. No sending a spreadsheet to a developer.</p>
 
@@ -83,9 +83,9 @@
 
       <h2>Stripe — payments</h2>
 
-      <p>Stripe was the only serious option for deposit handling. Payment Intents with <code>capture_method: manual</code> let us authorize the deposit at booking and capture it at check-in, which is the correct model for a luxury estate&mdash;the guest commits, the funds are secured, but the full capture happens when the stay begins.</p>
+      <p>Stripe was the clear choice for deposit handling. Payment Intents with <code>capture_method: manual</code> let us authorize the deposit at booking and capture it at check-in, which is the correct model for a property handling high-value deposits&mdash;the guest commits, the funds are secured, but the full capture happens when the stay begins.</p>
 
-      <p>Stripe Connect routes funds directly to the estate&rsquo;s bank account. There is no Loftare intermediary holding money. The estate receives its deposit directly, minus Stripe&rsquo;s processing fee, within two business days.</p>
+      <p>Stripe Connect routes funds directly to the owner&rsquo;s bank account. There is no Loftare intermediary holding money. The owner receives the deposit directly, minus Stripe&rsquo;s processing fee, within two business days.</p>
 
       <h2>Resend — transactional email</h2>
 
@@ -95,12 +95,12 @@
 
       <h2>Vercel — deployment</h2>
 
-      <p>Vercel is the correct deployment target for a Next.js platform with edge functions and image optimisation requirements. The preview URL workflow also matters during the build: the estate owner can review every change in a live preview environment before it goes to production, without any technical involvement on their part.</p>
+      <p>Vercel is the correct deployment target for a Next.js platform with edge functions and image optimisation requirements. The preview URL workflow also matters during the build: the owner can review every change in a live preview environment before it goes to production, without any technical involvement on their part.</p>
 
       <p>The full platform&mdash;website, booking engine, guest portal, owner dashboard&mdash;deploys from a single git push. Zero-downtime. No server management. No infrastructure decisions.</p>
 
       <div class="post-cta">
-        <p>Working on an estate? Let&rsquo;s talk.</p>
+        <p>Working on a direct channel? Let&rsquo;s talk.</p>
         <a href="/contact.html" class="btn btn-primary">Book a discovery call &rarr;</a>
       </div>
 
